@@ -1,79 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — TidyContacts</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
-  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.2em; margin-top: 1.8em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
-  .meta { color: #666; font-size: 0.9em; margin-bottom: 2em; }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-  th, td { text-align: left; padding: 8px 10px; border: 1px solid #ddd; vertical-align: top; }
-  th { background: #f5f5f5; }
-  code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
-  a { color: #0645ad; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — TidyContacts</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555555;
+      --border: #e0e0e0;
+      --card-bg: #f9f9f9;
+      --link: #0969da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #e0e0e0;
+        --muted: #aaaaaa;
+        --border: #333333;
+        --card-bg: #1c1c1c;
+        --link: #58a6ff;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding-bottom: 48px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    th {
+      background-color: var(--card-bg);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      background-color: var(--card-bg);
+      border-left: 4px solid var(--link);
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 0 4px 4px 0;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Privacy Policy — TidyContacts</h1>
+    <div class="meta">
+      <strong>Last updated:</strong> September 12, 2026<br>
+      <strong>App:</strong> TidyContacts (bundle ID <code>com.saeed.tidycontacts</code>)
+    </div>
 
-<h1>Privacy Policy — TidyContacts</h1>
-<p class="meta">Last updated: September 7, 2026<br>App: TidyContacts, bundle ID <code>com.saeed.tidycontacts</code></p>
+    <div class="highlight">
+      <strong>Summary:</strong> Your contacts and notes are stored locally on your device in the app's own database. They are not sent to us or to any third party. Two features send limited information off-device upon your explicit action. The app displays ads; the ad provider collects device identifiers for that purpose.
+    </div>
 
-<h2>Summary</h2>
-<p>Your contacts and notes are stored on your device, in the app's own database. They are not sent to us or to any third party. Two features send limited information off-device on your explicit action, described below. The app displays ads; the ad provider collects device identifiers for that purpose.</p>
+    <h2>What the app stores on your device</h2>
+    <ul>
+      <li>Your contacts, notes, tags, category labels, and attachments in the app's own local database — separate from, and in addition to, your phone's system address book.</li>
+      <li>Photos and files you attach to a contact's timeline.</li>
+      <li>Encrypted backups you create, until you export or delete them.</li>
+      <li>A randomly generated per-installation identifier (UUID) stored locally in preferences, used solely to track your balance of business lookup credits.</li>
+    </ul>
+    <p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else), or when using the business lookup / rewarded ad credit feature described below.</p>
 
-<h2>What the app stores on your device</h2>
-<ul>
-  <li>Your contacts, notes, tags, and attachments, in the app's own local database — separate from, and in addition to, your phone's system address book.</li>
-  <li>Photos and files you attach to a contact's timeline.</li>
-  <li>Encrypted backups you create, until you export or delete them.</li>
-</ul>
-<p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else).</p>
+    <h2>Permissions this app requests, and why</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Platform</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Contacts</strong> (read and write)</td>
+          <td>Android, iOS</td>
+          <td>To display and organize your existing contacts, and to write changes (like deactivating a contact) back to your phone's address book.</td>
+        </tr>
+        <tr>
+          <td><strong>Camera</strong></td>
+          <td>Android, iOS</td>
+          <td>To take a photo for a contact or a timeline attachment, and for on-device business-card scanning.</td>
+        </tr>
+        <tr>
+          <td><strong>Photo library</strong></td>
+          <td>iOS</td>
+          <td>To attach an existing photo to a contact or timeline entry.</td>
+        </tr>
+        <tr>
+          <td><strong>App Tracking Transparency</strong></td>
+          <td>iOS</td>
+          <td>To ask your permission before displaying personalized advertisements.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this date. No other permission is requested.</p>
+    <p>This app does <strong>not</strong> request access to your call log, SMS messages, or precise location.</p>
 
-<h2>Permissions this app requests, and why</h2>
-<table>
-  <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>Contacts (read and write)</td><td>To display and organize your existing contacts, and to write changes (like deactivating a contact) back to your phone's address book.</td></tr>
-  <tr><td>Camera</td><td>To take a photo for a contact or a timeline attachment, and for on-device business-card scanning.</td></tr>
-  <tr><td>Photo library</td><td>To attach an existing photo to a contact or timeline entry.</td></tr>
-</table>
-<p>No other permission is requested. This app does <strong>not</strong> request access to your call log, SMS messages, or precise location.</p>
+    <h2>On-device processing</h2>
+    <ul>
+      <li><strong>Business-card and text scanning (OCR):</strong> Runs entirely on your device using on-device machine learning. No image or extracted text is sent to any server.</li>
+      <li><strong>Contact categorization & migration analysis:</strong> Heuristic classification, category suggestions (e.g., trades, services, hospitality), duplicate detection, and temporary duration calculations run 100% locally on your device. No contact names or details leave your device for analysis.</li>
+    </ul>
 
-<h2>On-device processing</h2>
-<p>Business-card and text scanning (OCR) runs entirely on your device. No image or extracted text is sent anywhere for this feature.</p>
+    <h2>What leaves your device, and why</h2>
+    <p>Two features make network requests. Both are optional and only run when you use the specific feature:</p>
+    <p><strong>1. Link preview / business enrichment:</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
+    <p><strong>2. "Get business info" lookup & lookup credits:</strong> When you tap this button on a contact:</p>
+    <ul>
+      <li>The business name, address, and/or coordinates you are looking up are sent to our server, which forwards the request to HERE Technologies' business-search service and returns the result. No other contact data is included in this request.</li>
+      <li>The request includes the app's randomly generated per-installation identifier (<code>X-Install-Id</code>) so our server can track your remaining business lookup credits and prevent abuse.</li>
+      <li>When you watch an optional rewarded ad to earn additional business lookups, this installation identifier is passed as custom data to Google AdMob. Upon ad completion, Google's servers send a Server-Side Verification (SSV) callback directly to our server (<code>POST /api/admob_ssv</code>) confirming the ad was viewed, allowing our server to credit your installation.</li>
+    </ul>
+    <p>Neither feature sends your contacts, notes, or attachments anywhere. Both run only when you tap the specific button that triggers them.</p>
 
-<h2>What leaves your device, and why</h2>
-<p>Two features make network requests. Both are optional and only run when you use the specific feature.</p>
-<p><strong>1. Link preview / business enrichment.</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
-<p><strong>2. "Get business info" lookup.</strong> When you tap this button on a contact, the business name, address, and/or coordinates you're looking up are sent to our own server, which forwards the request to HERE Technologies' business-search service and returns the result. No other contact data is included in this request.</p>
-<p>Neither feature sends your contacts, notes, or attachments anywhere. Both run only when you tap the specific button that triggers them.</p>
+    <h2>Advertising</h2>
+    <p>This app displays ads, provided by Google AdMob, to support the free version. AdMob and its partners may collect and use device identifiers (such as your device's advertising ID) to show and measure ads. Where required by law (including in the EEA and UK), you will be asked for consent before personalized ads are shown, and you can change that choice later from the app's Settings screen. On iOS, you will also be asked for tracking permission via Apple's App Tracking Transparency system.</p>
+    <p>Additionally, when you choose to watch an optional rewarded ad to earn business lookup credits, the app sends the local installation identifier to Google as custom data for Server-Side Verification (SSV), so Google can notify our backend server directly to grant the credits.</p>
+    <p>You can remove banner and interstitial ads with the one-time "remove ads" purchase, when available.</p>
+    <p>For more on how Google uses this data, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.</p>
 
-<h2>Advertising</h2>
-<p>This app displays ads, provided by Google AdMob, to support the free version. AdMob and its partners may collect and use device identifiers (such as your device's advertising ID) to show and measure ads. Where required by law (including in the EEA and UK), you will be asked for consent before personalized ads are shown, and you can change that choice later from the app's Settings screen. On iOS, you will also be asked for tracking permission via Apple's App Tracking Transparency system.</p>
-<p>You can remove ads with the one-time "remove ads" purchase, when available.</p>
-<p>For more on how Google uses this data: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></p>
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not require an account or sign-up to use the app.</li>
+      <li>We do not run analytics or crash-reporting that phones home, as of this draft.</li>
+      <li>We do not sell your data.</li>
+      <li>We do not have server-side access to your contacts, notes, or attachments — the app's local database is the only copy, except for backups you choose to export yourself.</li>
+    </ul>
 
-<h2>What we do not do</h2>
-<ul>
-  <li>We do not require an account or sign-up to use the app.</li>
-  <li>We do not run analytics or crash-reporting that phones home, as of this policy's date.</li>
-  <li>We do not sell your data.</li>
-  <li>We do not have server-side access to your contacts, notes, or attachments — the app's local database is the only copy, except for backups you choose to export yourself.</li>
-</ul>
+    <h2>Children's privacy</h2>
+    <p>This app is not directed at children and is not designed to collect information from children.</p>
 
-<h2>Children's privacy</h2>
-<p>This app is not directed at children and is not designed to collect information from children.</p>
+    <h2>Data retention and deletion</h2>
+    <p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup.</p>
 
-<h2>Data retention and deletion</h2>
-<p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup.</p>
+    <h2>Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date at the top.</p>
 
-<h2>Changes to this policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date at the top.</p>
-
-<h2>Contact</h2>
-<p>If you have questions about this policy, contact: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
-
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, contact: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
+  </div>
 </body>
 </html>
