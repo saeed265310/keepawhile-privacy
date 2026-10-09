@@ -91,18 +91,19 @@
   <div class="container">
     <h1>Privacy Policy — TidyContacts</h1>
     <div class="meta">
-      <strong>Last updated:</strong> September 13, 2026<br>
+      <strong>Last updated:</strong> October 10, 2026<br>
       <strong>App:</strong> TidyContacts (bundle ID <code>com.saeed.tidycontacts</code>)
     </div>
 
     <div class="highlight">
-      <strong>Summary:</strong> Your contacts and notes are stored locally on your device in the app's own database. They are not sent to us or to any third party. Two features send limited information off-device upon your explicit action. The app also uses analytics and crash-reporting services, and displays ads; these providers collect device identifiers and bounded, non-personal usage data, never your contact content, as described below.
+      <strong>Summary:</strong> Your contacts and notes are stored locally on your device in the app's own database. They are not sent to us or to any third party. Three optional features send limited information off-device when you use them. The app also uses analytics and crash-reporting services, and displays ads; these providers collect device identifiers and bounded, non-personal usage data, never your contact content, as described below.
     </div>
 
     <h2>What the app stores on your device</h2>
     <ul>
       <li>Your contacts, notes, tags, category labels, and attachments in the app's own local database — separate from, and in addition to, your phone's system address book.</li>
       <li>Photos and files you attach to a contact's timeline.</li>
+      <li>With travel mode on, the coordinates of your position when you add a contact abroad, saved on that contact's timeline entry. You can delete the entry to remove them.</li>
       <li>Encrypted backups you create, until you export or delete them.</li>
       <li>A randomly generated per-installation identifier (UUID) stored locally in preferences, used solely to track your balance of business lookup credits.</li>
     </ul>
@@ -134,6 +135,11 @@
           <td>To attach an existing photo to a contact or timeline entry.</td>
         </tr>
         <tr>
+          <td><strong>Approximate location</strong></td>
+          <td>Android (coarse), iOS (while in use)</td>
+          <td>Only if you turn on travel mode. To work out which country you are in, so the app can offer to switch your phone-number region and tag contacts you add while abroad. Not requested otherwise.</td>
+        </tr>
+        <tr>
           <td><strong>App Tracking Transparency</strong></td>
           <td>iOS</td>
           <td>To ask your permission before displaying personalized advertisements.</td>
@@ -141,7 +147,7 @@
       </tbody>
     </table>
     <p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this date. No other permission is requested.</p>
-    <p>This app does <strong>not</strong> request access to your call log, SMS messages, or precise location.</p>
+    <p>This app does <strong>not</strong> request access to your call log or SMS messages. On Android it asks only for <em>approximate</em> location, never precise location. On iOS the system location prompt lets you choose precise or approximate for the app.</p>
 
     <h2>On-device processing</h2>
     <ul>
@@ -150,7 +156,7 @@
     </ul>
 
     <h2>What leaves your device, and why</h2>
-    <p>Two features make network requests. Both are optional and only run when you use the specific feature:</p>
+    <p>Three features make network requests. All are optional and only run when you use the specific feature:</p>
     <p><strong>1. Link preview / business enrichment:</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
     <p><strong>2. "Get business info" lookup & lookup credits:</strong> When you tap this button on a contact:</p>
     <ul>
@@ -158,7 +164,8 @@
       <li>The request includes the app's randomly generated per-installation identifier (<code>X-Install-Id</code>) so our server can track your remaining business lookup credits and prevent abuse.</li>
       <li>When you watch an optional rewarded ad to earn additional business lookups, this installation identifier is passed as custom data to Google AdMob. Upon ad completion, Google's servers send a Server-Side Verification (SSV) callback directly to our server (<code>POST /api/admob_ssv</code>) confirming the ad was viewed, allowing our server to credit your installation.</li>
     </ul>
-    <p>Neither feature sends your contacts, notes, or attachments anywhere. Both run only when you tap the specific button that triggers them.</p>
+    <p><strong>3. Travel mode (country detection):</strong> When travel mode is on, the app reads your approximate position when it opens and when you add a contact, and asks your phone's own geocoding service to turn the coordinates into a country. On Android that is the device's own location and geocoding service (typically Google's); on iOS it is Apple's. The coordinates go to that operating-system service, not to our server and not to Amplitude. Only the resulting country code is used by the app. Turn travel mode off in Settings to stop this.</p>
+    <p>None of these features sends your contacts, notes, or attachments anywhere. They run only when you use the specific feature that triggers them.</p>
 
     <h2>Analytics and crash reporting</h2>
     <p>This app uses two additional third-party services to understand how the app is used and to diagnose crashes:</p>
