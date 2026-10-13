@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — TidyContacts</title>
+  <title>Privacy Policy — Keep Awhile</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -89,123 +89,119 @@
 </head>
 <body>
   <div class="container">
-    <h1>Privacy Policy — TidyContacts</h1>
-    <div class="meta">
-      <strong>Last updated:</strong> October 10, 2026<br>
-      <strong>App:</strong> TidyContacts (bundle ID <code>com.saeed.tidycontacts</code>)
-    </div>
+<h1>Privacy Policy — Keep Awhile</h1>
+<div class="meta">
+<strong>Last updated:</strong> October 12, 2026<br>
+<strong>App:</strong> Keep Awhile, bundle ID <code>app.keepawhile</code>
+</div>
 
-    <div class="highlight">
-      <strong>Summary:</strong> Your contacts and notes are stored locally on your device in the app's own database. They are not sent to us or to any third party. Three optional features send limited information off-device when you use them. The app also uses analytics and crash-reporting services, and displays ads; these providers collect device identifiers and bounded, non-personal usage data, never your contact content, as described below.
-    </div>
-
-    <h2>What the app stores on your device</h2>
-    <ul>
-      <li>Your contacts, notes, tags, category labels, and attachments in the app's own local database — separate from, and in addition to, your phone's system address book.</li>
-      <li>Photos and files you attach to a contact's timeline.</li>
-      <li>With travel mode on, the coordinates of your position when you add a contact abroad, saved on that contact's timeline entry. You can delete the entry to remove them.</li>
-      <li>Encrypted backups you create, until you export or delete them.</li>
-      <li>A randomly generated per-installation identifier (UUID) stored locally in preferences, used solely to track your balance of business lookup credits.</li>
-    </ul>
-    <p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else), or when using the business lookup / rewarded ad credit feature described below.</p>
-
-    <h2>Permissions this app requests, and why</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Platform</th>
-          <th>Why</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Contacts</strong> (read and write)</td>
-          <td>Android, iOS</td>
-          <td>To display and organize your existing contacts, and to write changes (like deactivating a contact) back to your phone's address book.</td>
-        </tr>
-        <tr>
-          <td><strong>Camera</strong></td>
-          <td>Android, iOS</td>
-          <td>To take a photo for a contact or a timeline attachment, and for on-device business-card scanning.</td>
-        </tr>
-        <tr>
-          <td><strong>Photo library</strong></td>
-          <td>iOS</td>
-          <td>To attach an existing photo to a contact or timeline entry.</td>
-        </tr>
-        <tr>
-          <td><strong>Approximate location</strong></td>
-          <td>Android (coarse), iOS (while in use)</td>
-          <td>Only if you turn on travel mode. To work out which country you are in, so the app can offer to switch your phone-number region and tag contacts you add while abroad. Not requested otherwise.</td>
-        </tr>
-        <tr>
-          <td><strong>App Tracking Transparency</strong></td>
-          <td>iOS</td>
-          <td>To ask your permission before displaying personalized advertisements.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this date. No other permission is requested.</p>
-    <p>This app does <strong>not</strong> request access to your call log or SMS messages. On Android it asks only for <em>approximate</em> location, never precise location. On iOS the system location prompt lets you choose precise or approximate for the app.</p>
-
-    <h2>On-device processing</h2>
-    <ul>
-      <li><strong>Business-card and text scanning (OCR):</strong> Runs entirely on your device using on-device machine learning. No image or extracted text is sent to any server.</li>
-      <li><strong>Contact categorization & migration analysis:</strong> Heuristic classification, category suggestions (e.g., trades, services, hospitality), duplicate detection, and temporary duration calculations run 100% locally on your device. No contact names or details leave your device for analysis.</li>
-    </ul>
-
-    <h2>What leaves your device, and why</h2>
-    <p>Three features make network requests. All are optional and only run when you use the specific feature:</p>
-    <p><strong>1. Link preview / business enrichment:</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
-    <p><strong>2. "Get business info" lookup & lookup credits:</strong> When you tap this button on a contact:</p>
-    <ul>
-      <li>The business name, address, and/or coordinates you are looking up are sent to our server, which forwards the request to HERE Technologies' business-search service and returns the result. No other contact data is included in this request.</li>
-      <li>The request includes the app's randomly generated per-installation identifier (<code>X-Install-Id</code>) so our server can track your remaining business lookup credits and prevent abuse.</li>
-      <li>When you watch an optional rewarded ad to earn additional business lookups, this installation identifier is passed as custom data to Google AdMob. Upon ad completion, Google's servers send a Server-Side Verification (SSV) callback directly to our server (<code>POST /api/admob_ssv</code>) confirming the ad was viewed, allowing our server to credit your installation.</li>
-    </ul>
-    <p><strong>3. Travel mode (country detection):</strong> When travel mode is on, the app reads your approximate position when it opens and when you add a contact, and asks your phone's own geocoding service to turn the coordinates into a country. On Android that is the device's own location and geocoding service (typically Google's); on iOS it is Apple's. The coordinates go to that operating-system service, not to our server and not to Amplitude. Only the resulting country code is used by the app. Turn travel mode off in Settings to stop this.</p>
-    <p>None of these features sends your contacts, notes, or attachments anywhere. They run only when you use the specific feature that triggers them.</p>
-
-    <h2>Analytics and crash reporting</h2>
-    <p>This app uses two additional third-party services to understand how the app is used and to diagnose crashes:</p>
-    <ul>
-      <li><strong>Amplitude</strong> (product analytics). We track a small set of app events — such as completing first-run setup, importing contacts, deactivating or restoring a contact, and adding a timeline note — to understand which features are used. We do <strong>not</strong> send your contact names, phone numbers, emails, addresses, notes, attachments, or any other personal content to Amplitude. Only bounded, categorical information (for example, whether an attachment was included, or a bucketed count of contacts imported) is sent — never the underlying content or an identifier that maps back to a specific contact.
-        <ul>
-          <li>In the EEA and UK, Amplitude is off by default. You are asked to opt in with a one-time consent prompt the first time it would otherwise apply, and your answer can be changed at any time from the app's Settings screen.</li>
-          <li>Elsewhere, Amplitude is on by default and can be turned off at any time from the same Settings screen ("Share usage &amp; diagnostic data").</li>
-          <li>Turning it off deletes any data already queued on your device waiting to be sent.</li>
-        </ul>
-      </li>
-      <li><strong>Firebase Crashlytics</strong> (crash and error diagnostics). If the app crashes or encounters certain internal errors (for example, during a backup, restore, or database update), a diagnostic report is sent to help us fix the problem. This is on for everyone, with no opt-out toggle, because it is a stability/quality service rather than behavioral tracking — it never contains your contacts, notes, or attachments, only technical information such as the app's version, device model, and the error itself.</li>
-    </ul>
-    <p>Both services may receive standard device/app metadata (such as OS version, device model, and app version) as part of how they operate, independent of any content you enter into the app.</p>
-
-    <h2>Advertising</h2>
-    <p>This app displays ads, provided by Google AdMob, to support the free version. AdMob and its partners may collect and use device identifiers (such as your device's advertising ID) to show and measure ads. Where required by law (including in the EEA and UK), you will be asked for consent before personalized ads are shown, and you can change that choice later from the app's Settings screen. On iOS, you will also be asked for tracking permission via Apple's App Tracking Transparency system.</p>
-    <p>Additionally, when you choose to watch an optional rewarded ad to earn business lookup credits, the app sends the local installation identifier to Google as custom data for Server-Side Verification (SSV), so Google can notify our backend server directly to grant the credits.</p>
-    <p>You can remove banner and interstitial ads with the one-time "remove ads" purchase, when available.</p>
-    <p>For more on how Google uses this data, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.</p>
-
-    <h2>What we do not do</h2>
-    <ul>
-      <li>We do not require an account or sign-up to use the app.</li>
-      <li>Our analytics service (Amplitude) never receives your contact names, notes, attachments, or any other personal content — see "Analytics and crash reporting," above.</li>
-      <li>We do not sell your data.</li>
-      <li>We do not have server-side access to your contacts, notes, or attachments — the app's local database is the only copy, except for backups you choose to export yourself.</li>
-    </ul>
-
-    <h2>Children's privacy</h2>
-    <p>This app is not directed at children and is not designed to collect information from children.</p>
-
-    <h2>Data retention and deletion</h2>
-    <p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup.</p>
-
-    <h2>Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date at the top.</p>
-
-    <h2>Contact</h2>
-    <p>If you have questions about this policy, contact: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
-  </div>
+<div class="highlight"><strong>Summary:</strong> Your contacts and notes are stored on your device, in the app's own database. They are not sent to us or to any third party. Optional features that communicate over the network send limited information off-device only when you use them, described below. The app also uses analytics and crash-reporting services, and displays ads in the free version; these providers collect device identifiers and bounded, non-personal usage data, never your contact content, as described in the sections below. A one-time Keep Awhile Plus purchase removes ads and adds a daily business-lookup allowance; purchase verification runs on our server, as described below.</div>
+<h2>What the app stores on your device</h2>
+<ul>
+<li>Your contacts, notes, tags, category labels, and attachments, in the app's own local database — separate from, and in addition to, your phone's system address book.
+</li>
+<li>Photos and files you attach to a contact's timeline.
+</li>
+<li>With travel mode on, the coordinates of your position when you add a contact abroad, saved on that contact's timeline entry. You can delete the entry to remove them.
+</li>
+<li>Encrypted backups you create, until you export or delete them.
+</li>
+<li>A randomly generated per-installation identifier (UUID) stored locally in preferences, used to track your business lookup credit balance and enforce rate limits.
+</li>
+<li>Your Keep Awhile Plus purchase entitlement status, stored locally in preferences so the app knows whether Plus features are active.
+</li></ul>
+<p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else), or when using the business lookup, rewarded ad credit, and purchase verification features described below.</p>
+<h2>Permissions this app requests, and why</h2>
+<table>
+<thead><tr><th>Permission</th><th>Platform</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Contacts (read and write)</td><td>Android, iOS</td><td>To display and organize your existing contacts, and to write changes (like deactivating a contact) back to your phone's address book.</td></tr>
+<tr><td>Camera</td><td>Android, iOS</td><td>To take a photo for a contact or a timeline attachment, and for on-device business-card scanning.</td></tr>
+<tr><td>Photo library</td><td>iOS</td><td>To attach an existing photo to a contact or timeline entry.</td></tr>
+<tr><td>Approximate location</td><td>Android (coarse), iOS (while in use)</td><td>Only if you turn on travel mode. To work out which country you are in, so the app can offer to switch your phone-number region and tag contacts you add while abroad. Not requested otherwise.</td></tr>
+<tr><td>In-app billing (<code>com.android.vending.BILLING</code>)</td><td>Android</td><td>To process the optional one-time Keep Awhile Plus purchase through Google Play.</td></tr>
+<tr><td>App Tracking Transparency</td><td>iOS</td><td>To ask your permission before displaying personalized advertisements.</td></tr>
+</tbody>
+</table>
+<p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this draft's date. No other permission is requested.</p>
+<p>This app does <strong>not</strong> request access to your call log or SMS messages. On Android it asks only for <em>approximate</em> location, never precise location. On iOS the system location prompt lets you choose precise or approximate for the app.</p>
+<h2>On-device processing</h2>
+<ul>
+<li><strong>Business-card and text scanning (OCR):</strong> Runs entirely on your device using on-device machine learning. No image or extracted text is sent to any server.
+</li>
+<li><strong>Contact categorization &amp; migration analysis:</strong> Heuristic classification, category suggestions (e.g., trades, services, hospitality), duplicate detection, and temporary duration calculations run 100% locally on your device. No contact names or details leave your device for analysis.
+</li></ul>
+<h2>What leaves your device, and why</h2>
+<p>Four features make network requests. All are optional and only run when you use the specific feature.</p>
+<p><strong>1. Link preview / business enrichment.</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
+<p><strong>2. "Get business info" lookup &amp; lookup credits.</strong> When you tap this button on a contact or share a place into the app:</p>
+<ul>
+<li><strong>Search parameters sent to our server:</strong> The shared business place name, address, and/or coordinates you are looking up are sent to our backend server (<code>POST /api/overture-lookup</code>), along with your app's randomly generated per-installation identifier (<code>X-Install-Id</code>). No other contact details, notes, or address book contents are included.
+</li>
+<li><strong>Geocoding &amp; open data search:</strong> Because shared map links do not always include precise coordinates, our server sends the shared place name and address to HERE Technologies' Geocoding service (HERE Geocode) solely as a coordinate feeder to anchor the search location. HERE Geocode returns coordinates, not contact records. Our server then queries self-hosted open map data (Overture Maps Foundation) to find matching business candidates and phone numbers.
+</li>
+<li><strong>Candidate presentation:</strong> The app presents matching candidates in a selection sheet with an explicit "None of these" option and clearly indicates if a candidate has no phone listed; data is never silently written to your contact without your explicit selection.
+</li>
+<li><strong>Rate limiting, abuse prevention, and credit balance:</strong> Our server uses your installation identifier (<code>X-Install-Id</code>) and incoming IP address to enforce rate limits (velocity limits and hourly IP ceilings) and track your credit balance in our credit ledger (<code>here_lookup_limits</code>).
+</li>
+<li><strong>Aggregated outcome counters:</strong> To monitor search quality and service reliability without tracking users, our server records aggregate daily outcome counters grouped by country and result status (e.g., counts of searches that succeeded with phone, succeeded without phone, had no result, or encountered server busy/rate limits) in PocketBase (<code>lookup_daily_counters</code>). These counters contain counts only — never query text, place names, phone numbers, or installation identifiers.
+</li>
+<li><strong>Capacity pre-check &amp; rewarded ads:</strong> Free-tier users can earn business lookup credits by watching optional rewarded ads provided by Google AdMob. Before an ad is shown, the app checks server capacity (<code>POST /api/lookup-capacity</code>); if the server is busy or unavailable, no ad is displayed. When an ad completes, Google AdMob sends a Server-Side Verification (SSV) callback directly to our server (<code>POST /api/admob_ssv</code>) containing the installation identifier as custom data, crediting your installation.
+</li></ul>
+<p><strong>3. Keep Awhile Plus purchase verification.</strong> When you purchase Keep Awhile Plus:</p>
+<ul>
+<li><strong>One-time purchase:</strong> Keep Awhile Plus is an optional one-time in-app purchase (<code>keepawhile_plus</code>) processed via Google Play Billing. It removes ads and grants a daily business lookup allowance.
+</li>
+<li><strong>Server-side verification:</strong> To activate your entitlement, the app sends the Google Play purchase token and product ID to our server (<code>POST /api/register-purchase</code>). Our server verifies the purchase with the Google Play Developer API.
+</li>
+<li><strong>Hashed token storage:</strong> Our server stores only the cryptographic SHA-256 hash of the purchase token in our entitlement database (<code>purchase_entitlements</code>), associated with up to 3 installation IDs for re-installs and restores. The raw purchase token is never persisted or logged on our server.
+</li>
+<li><strong>Ad SDK disabled for buyers:</strong> Once Keep Awhile Plus is active, the Google Mobile Ads SDK is turned off completely: MobileAds is not initialized, banner and interstitial ads are removed, and no ad tracking or ad requests take place. (Regional consent gathering remains available solely for legal compliance).
+</li></ul>
+<p><strong>4. Travel mode (country detection).</strong> When travel mode is on, the app reads your approximate position when it opens and when you add a contact, and asks your phone's own geocoding service to turn the coordinates into a country. On Android that is the device's own location and geocoding service (typically Google's); on iOS it is Apple's. The coordinates go to that operating-system service, not to our server and not to Amplitude. Only the resulting country code is used by the app. Turn travel mode off in Settings to stop this.</p>
+<p>None of these features sends your contacts, notes, or attachments anywhere. They run only when you use the specific feature that triggers them.</p>
+<h2>Analytics and crash reporting</h2>
+<p>This app uses two additional third-party services to understand how the app is used and to diagnose crashes:</p>
+<ul>
+<li><strong>Amplitude</strong> (product analytics). We track a small set of app events — such as completing first-run setup, importing contacts, deactivating or restoring a contact, adding a timeline note, and business lookup or purchase outcomes (such as whether candidates were shown, whether a candidate was selected, or purchase status) — to understand which features are used. We do <strong>not</strong> send your contact names, phone numbers, emails, addresses, notes, attachments, search query text, or place names to Amplitude. Only bounded, categorical information (for example, whether an attachment was included, a bucketed count of contacts imported, or whether a lookup result contained a phone number) is sent — never the underlying content, contact details, or an identifier that maps back to a specific contact.
+<ul>
+<li><strong>In the EEA and UK</strong>, Amplitude is off by default. You are asked to opt in with a one-time consent prompt the first time it would otherwise apply, and your answer can be changed at any time from the app's Settings screen.
+</li>
+<li><strong>Elsewhere</strong>, Amplitude is on by default and can be turned off at any time from the same Settings screen ("Share usage &amp; diagnostic data").
+</li>
+<li>Turning it off deletes any data already queued on your device waiting to be sent.
+</li></ul>
+</li>
+<li><strong>Firebase Crashlytics</strong> (crash and error diagnostics). If the app crashes or encounters certain internal errors (for example, during a backup, restore, or database update), a diagnostic report is sent to help us fix the problem. This is on for everyone, with no opt-out toggle, because it is a stability/quality service rather than behavioral tracking — it never contains your contacts, notes, or attachments, only technical information such as the app's version, device model, and the error itself.
+</li></ul>
+<p>Both services may receive standard device/app metadata (such as OS version, device model, and app version) as part of how they operate, independent of any content you enter into the app.</p>
+<h2>Advertising</h2>
+<p>This app displays ads, provided by Google AdMob, to support the free version. AdMob and its partners may collect and use device identifiers (such as your device's advertising ID) to show and measure ads. Where required by law (including in the EEA and UK), you will be asked for consent before personalized ads are shown, and you can change that choice later from the app's Settings screen. On iOS, you will also be asked for tracking permission via Apple's App Tracking Transparency system.</p>
+<p>Additionally, for free-tier users who choose to watch an optional rewarded ad to earn business lookup credits, the app sends the local installation identifier to Google as custom data for Server-Side Verification (SSV), so Google can notify our backend server directly to grant the credits.</p>
+<p><strong>Ad removal and Keep Awhile Plus:</strong> You can permanently remove banner and interstitial ads and unlock a daily business lookup allowance with the one-time Keep Awhile Plus purchase (<code>keepawhile_plus</code>). When Keep Awhile Plus is active on your device, the Google Mobile Ads SDK is disabled and not initialized: no ads are loaded or displayed, no rewarded ads are required, and no advertising identifiers are collected by Google AdMob.</p>
+<p>For more on how Google uses advertising data: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+<h2>What we do not do</h2>
+<ul>
+<li>We do not require an account or sign-up to use the app.
+</li>
+<li>Our analytics service (Amplitude) never receives your contact names, phone numbers, notes, attachments, search queries, place names, or any other personal content — see "Analytics and crash reporting," above.
+</li>
+<li>Our servers never store raw purchase tokens, logging or persisting only SHA-256 token hashes.
+</li>
+<li>We do not log or retain lookup queries, place names, or returned phone numbers on our servers; server telemetry consists solely of aggregate daily outcome counters by country.
+</li>
+<li>We do not sell your data.
+</li>
+<li>We do not have server-side access to your contacts, notes, or attachments — the app's local database is the only copy, except for backups you choose to export yourself.
+</li></ul>
+<h2>Children's privacy</h2>
+<p>This app is not directed at children and is not designed to collect information from children.</p>
+<h2>Data retention and deletion</h2>
+<p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup.</p>
+<h2>Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date at the top.</p>
+<h2>Contact</h2>
+<p>If you have questions about this policy, contact: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
+</div>
 </body>
 </html>
