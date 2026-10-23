@@ -23,6 +23,15 @@ PASS 2 colours / PASS 3 external loads
 FAIL 1 links: privacy-policy.html, terms.html -> features.html missing (Task 5)
 ```
 
+**Tasks 4-5 AFTER** (`python3 scripts/check_site.py`):
+```
+PASS 1 links (WARN: 15 missing screenshot imgs, awaiting Task 6)
+PASS 2 colours / 3 external loads / 4 claims / 5 legal text / 6 structure+7 img
+```
+
+## Findings (executor)
+- Task 5: dropped "can change mode in Settings" and "simpler list" from the Safe Ledger bullet; PROJECT_SCOPE only supports an onboarding choice.
+
 ## Executor Cost Log
 
 Per task: `Task N: <executor name> — <figure + unit, or "not exposed">`. No entries yet.
