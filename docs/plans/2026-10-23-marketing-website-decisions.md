@@ -50,3 +50,6 @@ Per task: `Task N: <executor name> — <figure + unit, or "not exposed">`. No en
 
 ## Findings
 - 2026-10-23 architect: `privacy-policy.html` (Oct 12) is stale vs `index.html` (Oct 22). Commit 5b38476 only touched `index.html`. Task 3 must copy legal text from `index.html` @5b38476. Also check `docs`/Play: any listing pointing at `/privacy-policy.html` has been serving the old text.
+
+## Task 6
+Screenshots delivered (14 PNGs, 2.3 MB, under the 6 MB compress threshold). 08-smart-capture.png not delivered: fallback applied, Smart Capture row in features.html keeps its text, its shots div removed. 01-contacts-home shows the in-app "Remove ads" upsell strip, no ad banner: kept. Unreferenced extras: 03b, 04b, 09-scrolled-alt, 10-sheet-alt, 11-dark.
