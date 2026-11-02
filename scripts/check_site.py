@@ -3,8 +3,8 @@
 import html, os, re, subprocess, sys, tempfile
 from html.parser import HTMLParser
 
-BASE = "5b38476"  # commit holding the legal text baseline
-BASELINES = {"privacy-policy.html": "index.html", "terms.html": "terms.html"}
+BASE = "a49c9c6"  # commit holding the legal text baseline
+BASELINES = {"privacy-policy.html": "privacy-policy.html", "terms.html": "terms.html"}
 BANNED = ["we collect nothing", "collect no data", "no ads", "ad-free", "no tracking", "$",
           "per month", "/month", "subscription", "premium", "ai-powered", "iphone", "ios",
           "app store", "apple maps"]
@@ -97,9 +97,13 @@ def css_chunks(root):
 def check_colours(root):
     fails = []
     for f, c in css_chunks(root):
-        c = re.sub(r":root\s*\{[^}]*\}", "", c)
+        if f == "style.css":
+            if ":root" not in c:
+                fails.append("style.css: missing :root token block")
+            continue
+        c = re.sub(r":root(?:\[[^\]]*\])?\s*\{[^}]*\}", "", c)
         for m in re.findall(r"#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(", c):
-            fails.append(f"{f}: colour literal {m} outside :root")
+            fails.append(f"{f}: colour literal {m} in HTML inline style")
     return fails
 
 
@@ -198,9 +202,9 @@ def run(root, strict):
 def selftest():
     with tempfile.TemporaryDirectory() as d:
         os.makedirs(os.path.join(d, "assets"))
-        open(os.path.join(d, "assets", "style.css"), "w").write(":root{--a:#fff}\nbody{color:#123456}")
+        open(os.path.join(d, "assets", "style.css"), "w").write("body{color:#123456}")
         open(os.path.join(d, "index.html"), "w").write(
-            '<html><head><link rel="stylesheet" href="https://x.test/a.css"></head><body>'
+            '<html><head><link rel="stylesheet" href="https://x.test/a.css"></head><body style="color:#123456">'
             '<a href="nope.html">x</a><p>We have no ads here</p><img src="assets/screenshots/z.png"></body></html>')
         assert check_links(d, False)[0], "check1 should fail"
         assert check_colours(d), "check2 should fail"

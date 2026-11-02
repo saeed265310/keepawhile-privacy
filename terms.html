@@ -17,13 +17,28 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32">Keep Awhile</a>
-    <nav aria-label="Main"><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms.html" aria-current="page">Terms</a></li>
-    </ul></nav>
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>Keep Awhile</span>
+      <span class="brand-badge">Android</span>
+    </a>
+    <div class="header-controls">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="terms.html" aria-current="page">Terms</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+      <a class="header-cta" href="index.html#waitlist">Join Beta</a>
+    </div>
   </div>
 </header>
 <main id="main" class="legal">
@@ -109,14 +124,40 @@
 <p>Questions about these terms: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        <span>Keep Awhile</span>
+      </a>
+      <p style="margin: 6px 0 0;">Keep Awhile &middot; Android first. Contacts that know when to leave.</p>
+    </div>
     <ul>
+      <li><a href="features.html">Features</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></li>
     </ul>
-    <p>Keep Awhile &middot; Android first.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  var saved = localStorage.getItem("ka-theme");
+  if (saved === "light" || saved === "dark") {
+    root.setAttribute("data-theme", saved);
+  }
+  var btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme");
+      var sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("ka-theme", next);
+    });
+  }
+})();
+</script>
 </body>
 </html>

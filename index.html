@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keep Awhile — contacts that know when to leave</title>
-  <meta name="description" content="Keep Awhile is a contacts app for the plumber, the hotel and the one-off electrician: reachable for a while, out of the way later, never deleted.">
+  <title>Keep Awhile — Contacts that know when to leave, with the memory they deserve</title>
+  <meta name="description" content="Keep Awhile is an Android contacts and relationship memory app for temporary contacts and the people who stay: set expiry timers, attach timeline notes and photos, and hide clutter without deleting history.">
   <meta name="theme-color" content="#2563EB">
-  <meta property="og:title" content="Keep Awhile — contacts that know when to leave">
-  <meta property="og:description" content="Keep Awhile is a contacts app for the plumber, the hotel and the one-off electrician: reachable for a while, out of the way later, never deleted.">
+  <meta property="og:title" content="Keep Awhile — Contacts that know when to leave">
+  <meta property="og:description" content="Keep Awhile is an Android contacts app for the plumber, the hotel, and the one-off electrician: reachable now, out of the way later, never deleted.">
   <meta property="og:image" content="https://saeed265310.github.io/keepawhile-privacy/assets/og.png">
   <meta property="og:url" content="https://saeed265310.github.io/keepawhile-privacy/">
   <link rel="icon" href="assets/icon.png">
@@ -15,113 +15,460 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32">Keep Awhile</a>
-    <nav aria-label="Main"><ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul></nav>
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>Keep Awhile</span>
+      <span class="brand-badge">Android</span>
+    </a>
+    <div class="header-controls">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+      <a class="header-cta" href="#waitlist">Join Beta</a>
+    </div>
   </div>
 </header>
+
 <main id="main">
-<section class="hero">
-  <div class="wrap">
-    <h1>Keep them for a while. Then let them go.</h1>
-    <p>A contacts app for the plumber, the hotel, the one-off electrician. Reachable now, out of the way later, never deleted.</p>
-    <!-- STORE-LINK -->
-      <span class="btn" aria-disabled="true">Coming soon on Google Play</span>
-    <span class="note">Android 10 or later</span>
-    <div class="shots" style="margin-top:32px"><img class="phone" src="assets/screenshots/01-contacts-home.png" alt="Contacts tab with pinned contacts at the top and an alphabetical list below" width="1080" height="2400" loading="lazy"></div>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Timed Contacts &amp; Relationship Memory for Android</span>
+        </div>
+        <h1>Keep them for a while. <span class="text-gradient">Remember them when it counts.</span></h1>
+        <p class="hero-lead">
+          A contacts app for the plumber, the hotel, and the one-off electrician—plus the people who stay. Give temporary contacts an expiry timer, attach notes and warranty photos to their timeline, and hide them from your address book without losing their history.
+        </p>
 
-<section class="section" aria-labelledby="temp">
-  <div class="wrap">
-    <div class="feature-row">
-      <div class="text">
-        <h3>Temporary contacts</h3>
-        <p>Give a contact a time limit when you save it. The time left shows on a badge, and the Timed tab lists everyone who is on the clock. Extend, keep or move several at once.</p>
+        <!-- CLOSED BETA GOOGLE GROUP INSTANT ACCESS -->
+        <div class="waitlist-box" id="waitlist">
+          <div class="beta-header">
+            <span class="beta-badge">
+              <span class="beta-dot"></span>
+              Closed Beta Open · Instant Access
+            </span>
+            <span style="font-size: 0.84rem; color: var(--muted); font-weight: 600;">No approval wait</span>
+          </div>
+          <ol class="beta-steps">
+            <li>
+              <span class="beta-step-tag">Step 1</span>
+              <span>Join the <strong>keepawhile-testers</strong> Google Group with your Google Play account for instant beta whitelisting.</span>
+            </li>
+            <li>
+              <span class="beta-step-tag">Step 2</span>
+              <span>Download Keep Awhile from Google Play once the closed beta release is live.</span>
+            </li>
+          </ol>
+          <div class="beta-actions">
+            <a class="btn" href="https://groups.google.com/g/keepawhile-testers" target="_blank" rel="noopener">
+              Join Tester Google Group →
+            </a>
+            <!-- STORE-LINK -->
+            <span class="btn" aria-disabled="true">Coming soon on Google Play</span>
+          </div>
+        </div>
+
+        <div class="hero-meta-row">
+          <a class="btn-secondary" href="features.html">Explore all 8 features</a>
+        </div>
+
+        <ul class="trust-ticks" aria-label="Key highlights">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            On-device database
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Ask-first or auto-hide on expiry
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Android 10 or later
+          </li>
+        </ul>
       </div>
-      <div class="shots">        <img class="phone" src="assets/screenshots/02-temporary.png" alt="Timed tab listing contacts with days left on each" width="1080" height="2400" loading="lazy"></div>
-    </div>
 
-  </div>
-</section>
+      <!-- LARGE HERO STAGE -->
+      <div class="hero-stage">
+        <div class="hero-phones">
+          <div class="device-frame hero-phone-side">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/02-temporary.png" alt="Timed tab listing contacts with days left on each" width="1080" height="2400">
+            </div>
+          </div>
 
-<section class="section" aria-labelledby="mem">
-  <div class="wrap">
-    <div class="feature-row flip">
-      <div class="text">
-        <h3>Remember everything about them</h3>
-        <p>Every contact has a timeline of notes and attachments. What they quoted, what you lent them, the photo of the serial plate. Pin up to three notes so the important ones stay on top.</p>
+          <div class="device-frame hero-phone-main">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/04b-contact-detail-top.png" alt="Maria the Plumber contact card showing 3 days left timer and pinned quote note" width="1080" height="2400">
+            </div>
+          </div>
+
+          <div class="device-frame hero-phone-side">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/07-global-timeline.png" alt="Timeline tab with a search for wrench and matching notes across contacts" width="1080" height="2400">
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-badges" aria-label="App interface highlights">
+          <span class="ui-pill ui-pill--amber">⏳ 3 days left · Maria the Plumber</span>
+          <span class="ui-pill ui-pill--red">📌 Pinned Note · QUOTE</span>
+          <span class="ui-pill ui-pill--blue">🔧 Global Search · "wrench"</span>
+          <span class="ui-pill ui-pill--green">🛡️ One-Tap Restore</span>
+        </div>
       </div>
-      <div class="shots">        <img class="phone" src="assets/screenshots/04-contact-detail.png" alt="Contact page with a pinned note and notes grouped by date" width="1080" height="2400" loading="lazy">
-        <img class="phone" src="assets/screenshots/05-note-view.png" alt="A note opened with its photo attachment" width="1080" height="2400" loading="lazy"></div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section class="section" aria-labelledby="ask">
-  <div class="wrap">
-    <div class="feature-row">
-      <div class="text">
-        <h3>Nothing leaves without you asking</h3>
-        <p>When a contact's time is up, Keep Awhile asks. If you hide someone, they leave your phone's address book and the full record stays in the app. Restore them in one tap.</p>
+  <!-- INTERACTIVE 3-STEP WORKFLOW -->
+  <section class="section" id="workflow" aria-labelledby="workflow-title">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>How It Works</span>
+        </div>
+        <h2 id="workflow-title" class="section-title">Contacts and notes that work in tandem</h2>
+        <p class="section-subtitle">
+          Standard address books clutter your phone with one-off numbers while forgetting every quote, loan, and serial plate photo. Keep Awhile connects the full lifecycle.
+        </p>
       </div>
-      <div class="shots">        <img class="phone" src="assets/screenshots/03-expiry-nudge.png" alt="Notifications sheet asking what to do with an expired contact" width="1080" height="2400" loading="lazy"></div>
-    </div>
 
-  </div>
-</section>
+      <div class="workflow-shell">
+        <div class="workflow-steps" role="tablist" aria-label="How Keep Awhile works">
+          <button type="button" class="workflow-step is-active" role="tab" aria-selected="true" data-step="1">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <h3>Give temporary contacts a time limit</h3>
+            </div>
+            <p>
+              Set a countdown when you save the plumber, the hotel, or the roofer. A badge shows the days remaining, and the Timed tab gathers everyone who is on the clock so you can extend or keep several at once.
+            </p>
+          </button>
 
-<section class="section" aria-labelledby="find">
-  <div class="wrap">
-    <div class="feature-row flip">
-      <div class="text">
-        <h3>Find anything</h3>
-        <p>Search covers names, numbers and the text of your notes. The Timeline tab shows every note across every contact, newest first.</p>
+          <button type="button" class="workflow-step" role="tab" aria-selected="false" data-step="2">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <h3>Attach timeline notes, quotes, and photos</h3>
+            </div>
+            <p>
+              Every contact has a chronological timeline of notes and file attachments. Tag entries with colour-coded types like Quote, Loan, Appointment, or Warranty, and pin up to three important notes to the top.
+            </p>
+          </button>
+
+          <button type="button" class="workflow-step" role="tab" aria-selected="false" data-step="3">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <h3>Review on expiry or auto-hide—restore anytime</h3>
+            </div>
+            <p>
+              By default, when a timer finishes, Keep Awhile asks whether to Keep, Extend, or Hide—or you can turn on auto-hide in Settings for hands-free cleanup. Either way, hiding removes the contact from your phone's address book while preserving the full record and notes inside the app for one-tap restoration.
+            </p>
+          </button>
+        </div>
+
+        <div class="workflow-preview">
+          <div class="workflow-pane is-active" data-pane="1">
+            <div class="device-frame">
+              <div class="device-screen">
+                <img class="phone" src="assets/screenshots/01-contacts-home.png" alt="Contacts tab with pinned contacts at the top and an alphabetical list below" width="1080" height="2400" loading="lazy">
+              </div>
+            </div>
+            <span class="workflow-caption">Pinned favourites on top, clean address book below, Timed tab one tap away.</span>
+          </div>
+
+          <div class="workflow-pane" data-pane="2">
+            <div class="device-frame">
+              <div class="device-screen">
+                <img class="phone" src="assets/screenshots/04-contact-detail.png" alt="Contact page with a pinned note and notes grouped by date" width="1080" height="2400" loading="lazy">
+              </div>
+            </div>
+            <span class="workflow-caption">Notes grouped by Pinned, Today, and This Week with colour-coded category badges.</span>
+          </div>
+
+          <div class="workflow-pane" data-pane="3">
+            <div class="device-frame">
+              <div class="device-screen">
+                <img class="phone" src="assets/screenshots/03b-expiry-decision.png" alt="Expired contact review screen with Keep, Extend, and Hide choices" width="1080" height="2400" loading="lazy">
+              </div>
+            </div>
+            <span class="workflow-caption">Review expired contacts with Keep, Extend, or Hide—or enable auto-hide in Settings.</span>
+          </div>
+        </div>
       </div>
-      <div class="shots">        <img class="phone" src="assets/screenshots/07-global-timeline.png" alt="Timeline tab with a search and matching notes" width="1080" height="2400" loading="lazy"></div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- 4-PILLAR BENTO SHOWCASE -->
+  <section class="section" id="capabilities" aria-labelledby="cap-title">
+    <div class="wrap">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Core Capabilities</span>
+        </div>
+        <h2 id="cap-title" class="section-title">Designed for real-world recall</h2>
+        <p class="section-subtitle">
+          Built for the everyday details that slip through a standard contacts list.
+        </p>
+      </div>
 
-<section class="strip" aria-labelledby="own">
-  <div class="wrap section">
-    <h2 id="own" class="section-title">Your data stays yours</h2>
-    <div class="grid">
-      <div class="card"><h3>On your device</h3><p>Your contacts, notes and attachments are kept in the app's own database on your phone.</p></div>
-      <div class="card"><h3>Works offline</h3><p>Adding, editing, searching and restoring contacts never needs a connection.</p></div>
-      <div class="card"><h3>Backups you control</h3><p>Export an encrypted copy, or keep a plain-text vCard safety copy on your device.</p></div>
+      <!-- LARGE-FORMAT FEATURE SHOWCASE ROWS (SPARING POP-OUT SLICES ON KEY FEATURES ONLY) -->
+      <div class="feature-row" id="temp">
+        <div class="text">
+          <span class="ui-pill ui-pill--amber">Timed Lifecycle</span>
+          <h3>Temporary contacts that unclutter your phone</h3>
+          <p>
+            Give a contact a time limit when you save it. The time left shows on a clear badge, and the Timed tab lists everyone who is on the clock. Extend, keep, or move several contacts at once when a project wraps up.
+          </p>
+        </div>
+        <div class="shots">
+          <div class="device-frame has-popout">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/02-temporary.png" alt="Timed tab listing contacts with days left on each" width="1080" height="2400" loading="lazy">
+            </div>
+            <div class="popout-slice" style="top: 14%;">
+              <img src="assets/screenshots/slice-02-timed-grid.png" alt="Timed contacts grid showing Expired, 1 day, and 3 days badges" width="1032" height="405" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row flip" id="mem">
+        <div class="text">
+          <span class="ui-pill ui-pill--purple">Contextual Timeline</span>
+          <h3>Remember everything about them</h3>
+          <p>
+            Every contact has a timeline of notes and attachments—what they quoted, what you lent them, or the photo of the boiler serial plate. Use five built-in note types or create your own across eight colours, and pin up to three notes to the top.
+          </p>
+        </div>
+        <div class="shots">
+          <div class="device-frame has-popout">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/04-contact-detail.png" alt="Contact page with a pinned note and notes grouped by date" width="1080" height="2400" loading="lazy">
+            </div>
+            <div class="popout-slice" style="top: 26%;">
+              <img src="assets/screenshots/slice-04-pinned-quote.png" alt="Pinned quote note on Maria the Plumber" width="1016" height="316" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row" id="ask">
+        <div class="text">
+          <span class="ui-pill ui-pill--red">Your Rules on Expiry</span>
+          <h3>Ask first by default, or auto-hide in Settings</h3>
+          <p>
+            When a contact's time is up, Keep Awhile nudges you to Keep, Extend, or Hide—or you can enable auto-hide in Settings. Hidden contacts leave your phone's address book while the full record stays safely inside the app, ready to restore in one tap.
+          </p>
+        </div>
+        <div class="shots">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/03-expiry-nudge.png" alt="Notifications sheet asking what to do with an expired contact" width="1080" height="2400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row flip" id="find">
+        <div class="text">
+          <span class="ui-pill ui-pill--blue">Instant Recall</span>
+          <h3>Find anything across every note</h3>
+          <p>
+            Forget the plumber's name two years later? Search covers names, phone numbers, note types, and the full text of your notes. The Timeline tab shows every note across every contact, newest first.
+          </p>
+        </div>
+        <div class="shots">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/07-global-timeline.png" alt="Timeline tab with a search and matching notes" width="1080" height="2400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:36px;">
+        <a class="btn-secondary" href="features.html">See Smart Capture, Travel Mode, Backups &amp; Recovery →</a>
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" aria-labelledby="faq">
-  <div class="wrap">
-    <h2 id="faq" class="section-title">Questions</h2>
-    <details><summary>Where is my data?</summary><p>On your device. Your contacts, notes and attachments are not sent to us. The free version shows ads, and the ad and analytics services it uses collect device identifiers and limited usage data, never your contact content. The details are in the <a href="privacy-policy.html">Privacy Policy</a>.</p></details>
-    <details><summary>Does it work offline?</summary><p>Yes. Managing contacts and notes needs no connection. Optional features such as business lookup use the network only when you tap them.</p></details>
-    <details><summary>What happens when a contact expires?</summary><p>Nothing happens on its own. Keep Awhile asks you whether to keep, extend or hide the contact. A hidden contact is removed from your phone's address book and kept in full inside the app, where Keep Awhile holds the only copy until you restore it.</p></details>
-    <details><summary>Does it cost anything?</summary><p>Free to start. Details at launch.</p></details>
-    <details><summary>Can I get my contacts back?</summary><p>Yes. Hidden contacts restore in one tap, the Recovery Center can undo recent changes, and you can export an encrypted backup or keep the plain-text vCard safety copy.</p></details>
-  </div>
-</section>
+  <!-- PRIVACY & DATA SOVEREIGNTY STRIP -->
+  <section class="strip" aria-labelledby="own">
+    <div class="wrap section">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Local-First Architecture</span>
+        </div>
+        <h2 id="own" class="section-title">Your data stays yours</h2>
+        <p class="section-subtitle">
+          No account required. Your address book and personal notes live on your phone, backed by recovery tools you control.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          </div>
+          <h3>On your device</h3>
+          <p>Your contacts, notes, custom types, and photo attachments are kept in the app's own local database on your phone—never uploaded to us.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Works offline</h3>
+          <p>Adding, editing, searching, categorising, and restoring contacts never needs a network connection. Text recognition runs locally on your device.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3>Backups you control</h3>
+          <p>Export a passphrase-encrypted database copy, or enable the optional plain-text vCard safety copy on your device that survives uninstalling the app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" aria-labelledby="faq">
+    <div class="wrap">
+      <div class="section-header">
+        <h2 id="faq" class="section-title">Questions &amp; Answers</h2>
+        <p class="section-subtitle">Everything you need to know about how Keep Awhile handles your contacts.</p>
+      </div>
+
+      <div class="faq-list">
+        <details open>
+          <summary>Where is my data?</summary>
+          <p>On your device. Your contacts, notes and attachments are not sent to us. The free version shows ads, and the ad and analytics services it uses collect device identifiers and limited usage data, never your contact content. The details are in the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        </details>
+        <details>
+          <summary>Does it work offline?</summary>
+          <p>Yes. Managing contacts and notes needs no connection. Optional features such as business lookup use the network only when you tap them.</p>
+        </details>
+        <details>
+          <summary>What happens when a contact expires?</summary>
+          <p>By default, Keep Awhile asks you whether to keep, extend or hide the contact—or you can turn on auto-hide in Settings so expired contacts hide automatically. A hidden contact is removed from your phone's address book and kept in full inside the app, where Keep Awhile holds the only copy until you restore it.</p>
+        </details>
+        <details>
+          <summary>Does it cost anything?</summary>
+          <p>Free to start. Details at launch.</p>
+        </details>
+        <details>
+          <summary>Can I get my contacts back?</summary>
+          <p>Yes. Hidden contacts restore in one tap, the Recovery Center can undo recent changes, and you can export an encrypted backup or keep the plain-text vCard safety copy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CONVERSION BANNER -->
+  <section class="section" aria-labelledby="cta-bottom">
+    <div class="wrap">
+      <div class="cta-banner">
+        <h2 id="cta-bottom">Be the first to test Keep Awhile on Android</h2>
+        <p>Our Google Group automatically adds your Google account to the closed beta with zero approval wait.</p>
+        <div class="waitlist-box">
+          <div class="beta-header">
+            <span class="beta-badge">
+              <span class="beta-dot"></span>
+              Instant Beta Whitelisting
+            </span>
+            <span style="font-size: 0.84rem; color: var(--muted); font-weight: 600;">Android 10 or later</span>
+          </div>
+          <div class="beta-actions">
+            <a class="btn" href="https://groups.google.com/g/keepawhile-testers" target="_blank" rel="noopener">
+              Join Tester Google Group →
+            </a>
+            <a class="btn-secondary" href="features.html">View Full Feature Tour</a>
+          </div>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 0.9rem;">
+          Questions or feedback? Email <a href="mailto:saeed201@gmail.com?subject=Keep%20Awhile%20Android%20Beta">saeed201@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
+
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        <span>Keep Awhile</span>
+      </a>
+      <p style="margin: 6px 0 0;">Keep Awhile &middot; Android first. Contacts that know when to leave.</p>
+    </div>
     <ul>
+      <li><a href="features.html">Features</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></li>
     </ul>
-    <p>Keep Awhile &middot; Android first.</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  // 1. Theme toggle
+  var root = document.documentElement;
+  var saved = localStorage.getItem("ka-theme");
+  if (saved === "light" || saved === "dark") {
+    root.setAttribute("data-theme", saved);
+  }
+  var btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme");
+      var sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("ka-theme", next);
+    });
+  }
+
+  // 2. Interactive 3-step workflow tabs
+  var steps = document.querySelectorAll(".workflow-step");
+  var panes = document.querySelectorAll(".workflow-pane");
+  steps.forEach(function (step) {
+    step.addEventListener("click", function () {
+      var target = step.getAttribute("data-step");
+      steps.forEach(function (s) {
+        var active = s === step;
+        s.classList.toggle("is-active", active);
+        s.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      panes.forEach(function (p) {
+        p.classList.toggle("is-active", p.getAttribute("data-pane") === target);
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>

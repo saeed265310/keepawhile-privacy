@@ -17,38 +17,55 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32">Keep Awhile</a>
-    <nav aria-label="Main"><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="privacy-policy.html" aria-current="page">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul></nav>
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>Keep Awhile</span>
+      <span class="brand-badge">Android</span>
+    </a>
+    <div class="header-controls">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy-policy.html" aria-current="page">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+      <a class="header-cta" href="index.html#waitlist">Join Beta</a>
+    </div>
   </div>
 </header>
 <main id="main" class="legal">
 <h1>Privacy Policy — Keep Awhile</h1>
 <div class="meta">
-<strong>Last updated:</strong> October 22, 2026<br>
+<strong>Last updated:</strong> November 2, 2026<br>
 <strong>App:</strong> Keep Awhile, bundle ID <code>app.keepawhile</code>
 </div>
 
-<div class="highlight"><strong>Summary:</strong> Your contacts and notes are stored on your device, in the app's own database. They are not sent to us or to any third party. Optional features that communicate over the network send limited information off-device only when you use them, described below. The app also uses analytics and crash-reporting services, and displays ads in the free version; these providers collect device identifiers and bounded, non-personal usage data, never your contact content, as described in the sections below. An optional one-time Keep Awhile Plus purchase is verified on our server, as described below.</div>
+<div class="highlight"><strong>Summary:</strong> Your contacts and notes are stored on your device, in the app's own database. They are not sent to us or to any third party. Optional features that communicate over the network send limited information off-device only when you use them, described below. The app also uses analytics and crash-reporting services, and displays ads in the free version; these providers collect device identifiers, your IP address and bounded, non-personal usage data, never your contact content, as described in the sections below. An optional one-time Keep Awhile Plus purchase is verified on our server, as described below.</div>
 <h2>What the app stores on your device</h2>
 <ul>
 <li>Your contacts, notes, tags, category labels, and attachments, in the app's own local database — separate from, and in addition to, your phone's system address book.
 </li>
 <li>Photos and files you attach to a contact's timeline.
 </li>
-<li>With travel mode on, the coordinates of your position when you add a contact abroad, saved on that contact's timeline entry. You can delete the entry to remove them.
+<li>With travel mode on, the coordinates of your position when you add a contact abroad, saved on that contact's timeline entry. You can delete the entry to remove them. Whenever such an entry is shown, the app fetches a small map picture for those coordinates from a public map-image service (see "What leaves your device," item 5).
 </li>
 <li>Encrypted backups you create, until you export or delete them.
+</li>
+<li>A dated encrypted copy of each export, saved to shared storage on each export (Download/KeepAwhile on Android, or the folder you chose). It survives uninstall, stays encrypted with your passphrase, and the app never deletes it by itself — remove it with your phone's Files app.
 </li>
 <li>A randomly generated per-installation identifier (UUID) stored locally in preferences, used to track your business lookup credit balance and enforce rate limits.
 </li>
 <li>Your Keep Awhile Plus purchase entitlement status, stored locally in preferences so the app knows whether Plus features are active.
 </li></ul>
-<p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else), when using the business lookup, rewarded ad credit, and purchase verification features described below, or when you turn on the optional vCard safety mirror described below (which writes plain-text copies to shared storage on your own device, never over the network).</p>
+<p>None of the above leaves your device unless you explicitly export or share it yourself (e.g. using your phone's share sheet to send a backup file, or a contact's notes, to someone else), when using the business lookup, rewarded ad credit, and purchase verification features described below, when you view a travel-mode timeline entry (its map picture is fetched from a public map service, item 5 below), or when you turn on the optional vCard safety mirror described below (which writes plain-text copies to shared storage on your own device, never over the network).</p>
 <h2>Optional vCard safety mirror (plain-text files outside the app)</h2>
 <p>If you turn it on, the app keeps a recoverable copy of your contacts in two plain-text vCard files:</p>
 <ul>
@@ -65,6 +82,8 @@
 <p>Things you should know:</p>
 <ul>
 <li>The files are plain text and never encrypted. Anyone, or any app, with access to that folder can read them. This is deliberate: the copy must still be readable if the app is gone.
+</li>
+<li>Each file holds the full record for every contact it covers: notes, addresses, job titles, birthdays, labels and other fields from the original address-book entry, plus edits you make in the app. Photos are never included. Contacts you created in the app (rather than imported from your address book) hold only what you saved in the app.
 </li>
 <li>The files never leave your device over the network. The app only writes them to local storage; they are not uploaded, synced, or sent anywhere by the app.
 </li>
@@ -88,9 +107,12 @@
 <tr><td>Approximate location</td><td>Android (coarse), iOS (while in use)</td><td>Only if you turn on travel mode. To work out which country you are in, so the app can offer to switch your phone-number region and tag contacts you add while abroad. Not requested otherwise.</td></tr>
 <tr><td>In-app billing (<code>com.android.vending.BILLING</code>)</td><td>Android</td><td>To process the optional one-time Keep Awhile Plus purchase through Google Play.</td></tr>
 <tr><td>App Tracking Transparency</td><td>iOS</td><td>To ask your permission before displaying personalized advertisements.</td></tr>
+<tr><td>Network access and network state (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</td><td>Android</td><td>To reach the features described under "What leaves your device," and to load ads. Added by the app's libraries, not listed in the app's own manifest.</td></tr>
+<tr><td>Advertising ID and ad attribution (<code>com.google.android.gms.permission.AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code>)</td><td>Android</td><td>Added by the Google Mobile Ads library so Google AdMob can show and measure ads. See "Advertising."</td></tr>
+<tr><td>Wake lock and foreground service (<code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>)</td><td>Android</td><td>Added by third-party libraries (for example ads and crash reporting) for background housekeeping. The app does not run its own foreground service.</td></tr>
 </tbody>
 </table>
-<p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this draft's date. No other permission is requested.</p>
+<p>Verified against <code>android/app/src/main/AndroidManifest.xml</code> and <code>ios/Runner/Info.plist</code> as of this draft's date. The app's own Android manifest declares only the first five Android permissions above (contacts read and write, camera, approximate location, billing); the last three rows are merged in from third-party libraries at build time. No other permission is requested.</p>
 <p>This app does <strong>not</strong> request access to your call log or SMS messages. On Android it asks only for <em>approximate</em> location, never precise location. On iOS the system location prompt lets you choose precise or approximate for the app.</p>
 <h2>On-device processing</h2>
 <ul>
@@ -99,11 +121,11 @@
 <li><strong>Contact categorization &amp; migration analysis:</strong> Heuristic classification, category suggestions (e.g., trades, services, hospitality), duplicate detection, and temporary duration calculations run 100% locally on your device. No contact names or details leave your device for analysis.
 </li></ul>
 <h2>What leaves your device, and why</h2>
-<p>Four features make network requests. All are optional and only run when you use the specific feature.</p>
+<p>Five features make network requests. All are optional and only run when you use the specific feature.</p>
 <p><strong>1. Link preview / business enrichment.</strong> When you share a link (for example, a Google Maps link or a business website) into the app, it fetches basic public page information (name, address, photo) from that URL to help fill in a contact's details. The URL you share is contacted directly for this.</p>
 <p><strong>2. "Get business info" lookup &amp; lookup credits.</strong> When you tap this button on a contact or share a place into the app:</p>
 <ul>
-<li><strong>Search parameters sent to our server:</strong> The shared business place name, address, and/or coordinates you are looking up are sent to our backend server (<code>POST /api/overture-lookup</code>), along with your app's randomly generated per-installation identifier (<code>X-Install-Id</code>). No other contact details, notes, or address book contents are included. We temporarily keep recent lookup results for a short period to avoid repeat charges.
+<li><strong>Search parameters sent to our server:</strong> The shared business place name, address, and/or coordinates you are looking up are sent to our backend server (<code>POST /api/overture-lookup</code>), along with your app's randomly generated per-installation identifier (<code>X-Install-Id</code>), your app's display language, and your phone's time-zone offset. No other contact details, notes, or address book contents are included. We temporarily keep recent lookup results for a short period to avoid repeat charges.
 </li>
 <li><strong>Geocoding &amp; open data search:</strong> Because shared map links do not always include precise coordinates, our server sends the shared place name and address to HERE Technologies' Geocoding service (HERE Geocode) solely as a coordinate feeder to anchor the search location. HERE Geocode returns coordinates, not contact records. Our server then queries self-hosted open map data (Overture Maps Foundation) to find matching business candidates and phone numbers.
 </li>
@@ -114,6 +136,8 @@
 <li><strong>Aggregated outcome counters:</strong> To monitor search quality and service reliability without tracking users, our server records aggregate daily outcome counters grouped by country and result status (e.g., counts of searches that succeeded with phone, succeeded without phone, had no result, or encountered server busy/rate limits) in PocketBase (<code>lookup_daily_counters</code>). These counters contain counts only — never query text, place names, phone numbers, or installation identifiers.
 </li>
 <li><strong>Capacity pre-check &amp; rewarded ads:</strong> Users can earn additional business lookup credits by watching optional rewarded ads provided by Google AdMob. Before an ad is shown, the app checks server capacity (<code>POST /api/lookup-capacity</code>); if the server is busy or unavailable, no ad is displayed. When an ad completes, Google AdMob sends a Server-Side Verification (SSV) callback directly to our server (<code>POST /api/admob_ssv</code>) containing the installation identifier as custom data, crediting your installation. We store recent ad-reward times, deleted automatically after a short period, linked only to your random install ID.
+</li>
+<li><strong>Reward ratio:</strong> When the lookup credit screen opens, the app asks our server how many lookups one rewarded ad earns (<code>GET /api/reward_ratio</code>). This request carries no identifier or contact data; our server sees only your IP address, like any web request.
 </li></ul>
 <p><strong>3. Keep Awhile Plus purchase verification.</strong> When you purchase Keep Awhile Plus:</p>
 <ul>
@@ -127,12 +151,13 @@
 </li>
 <li><strong>Ad SDK for buyers:</strong> When Keep Awhile Plus is active, banner and interstitial ads are not shown. The Google Mobile Ads SDK is still initialized solely to show rewarded ads you choose to watch. (Regional consent gathering remains available solely for legal compliance).
 </li></ul>
-<p><strong>4. Travel mode (country detection).</strong> When travel mode is on, the app reads your approximate position when it opens and when you add a contact, and asks your phone's own geocoding service to turn the coordinates into a country. On Android that is the device's own location and geocoding service (typically Google's); on iOS it is Apple's. The coordinates go to that operating-system service, not to our server and not to Amplitude. Only the resulting country code is used by the app. Turn travel mode off in Settings to stop this.</p>
+<p><strong>4. Travel mode (country detection).</strong> When travel mode is on, the app reads your approximate position when it opens and when you add a contact, and asks your phone's own geocoding service to turn the coordinates into a country. On Android that is the device's own location and geocoding service (typically Google's); on iOS it is Apple's. The coordinates go to that operating-system service, not to our server and not to Amplitude. Only the resulting country code is used by the app. Turn travel mode off in Settings to stop this. (The coordinates saved on a timeline entry are also used for the map picture described in item 5.)</p>
+<p><strong>5. Travel-entry map picture.</strong> A timeline entry created in travel mode stores the coordinates of your position (approximate on Android; on iPhone, as precise as the location permission you granted). Each time that entry is shown on a contact's timeline or in the global timeline, the app requests a small map image from the public OpenStreetMap static-map service (<code>staticmap.openstreetmap.de</code>, operated by the OpenStreetMap community, not by us). That request contains those coordinates (as the map centre and marker) and, as with any web request, your IP address and device details. The service is not asked to store them, but we do not control its logging; see the OpenStreetMap privacy policy at <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>. Entries without coordinates make no such request. Deleting the entry stops the requests; turning travel mode off stops new entries from being created but does not remove existing ones.</p>
 <p>None of these features sends your contacts, notes, or attachments anywhere. They run only when you use the specific feature that triggers them.</p>
 <h2>Analytics and crash reporting</h2>
 <p>This app uses two additional third-party services to understand how the app is used and to diagnose crashes:</p>
 <ul>
-<li><strong>Amplitude</strong> (product analytics). We track a small set of app events — such as completing first-run setup, importing contacts, deactivating or restoring a contact, adding a timeline note, and business lookup or purchase outcomes (such as whether candidates were shown, whether a candidate was selected, or purchase status) — to understand which features are used. We do <strong>not</strong> send your contact names, phone numbers, emails, addresses, notes, attachments, search query text, or place names to Amplitude. Only bounded, categorical information (for example, whether an attachment was included, a bucketed count of contacts imported, or whether a lookup result contained a phone number) is sent — never the underlying content, contact details, or an identifier that maps back to a specific contact. Amplitude processes this data in the United States.
+<li><strong>Amplitude</strong> (product analytics). We track a small set of app events — such as completing first-run setup, importing contacts, deactivating or restoring a contact, adding a timeline note, and business lookup or purchase outcomes (such as whether candidates were shown, whether a candidate was selected, or purchase status) — to understand which features are used. We do <strong>not</strong> send your contact names, phone numbers, emails, addresses, notes, attachments, search query text, or place names to Amplitude. Only bounded, categorical information (for example, whether an attachment was included, a bucketed count of contacts imported, or whether a lookup result contained a phone number) is sent — never the underlying content, contact details, or an identifier that maps back to a specific contact. Amplitude processes this data in the United States. Like any analytics SDK, Amplitude's library also attaches standard technical fields to each event. The app keeps the library's default settings, which include a random device identifier, your IP address (from which Amplitude derives an approximate country, region and city), language, platform, OS and app version, device model and manufacturer, mobile carrier, and, where the device makes it available, the advertising ID (Android) or vendor ID (iOS). Automatic page, screen and deep-link capture is switched off.
 <ul>
 <li><strong>In the EEA and UK</strong>, Amplitude is off by default. You are asked to opt in with a one-time consent prompt the first time it would otherwise apply, and your answer can be changed at any time from the app's Settings screen. Until the app knows your region, tracking stays off: if the region is not yet known, you are treated as if you are in the EEA and UK.
 </li>
@@ -141,9 +166,9 @@
 <li>Turning it off deletes any data already queued on your device waiting to be sent.
 </li></ul>
 </li>
-<li><strong>Firebase Crashlytics</strong> (crash and error diagnostics). If the app crashes, encounters certain internal errors (for example, during a backup, restore, or database update), or fails to start (which startup step was reached, timings, firmware build id), a diagnostic report is sent to help us fix the problem. This is on for everyone, with no opt-out toggle, because it is a stability/quality service rather than behavioral tracking — it never contains your contacts, notes, or attachments, only technical information such as the app's version, device model, and the error itself.
+<li><strong>Firebase Crashlytics</strong> (crash and error diagnostics). If the app crashes, encounters certain internal errors (for example, during a backup, restore, or database update), or fails to start (which startup step was reached, timings, firmware build id), a diagnostic report is sent to help us fix the problem. This is on for everyone, with no opt-out toggle, because it is a stability/quality service rather than behavioral tracking — it never contains your contacts, notes, or attachments, only technical information such as the app's version, device model, and the error itself, plus a few coarse context labels: the current screen name and size, the app language and mode (basic or full CRM), whether the contacts permission is granted, a bucketed (never exact) contact count, short action breadcrumbs such as "import started", and, on Android, why the previous run ended (for example low memory). Firebase also assigns a random installation identifier and sees your IP address.
 </li></ul>
-<p>Both services may receive standard device/app metadata (such as OS version, device model, and app version) as part of how they operate, independent of any content you enter into the app.</p>
+<p>Both services receive standard device/app metadata (such as OS version, device model, and app version) as part of how they operate, independent of any content you enter into the app.</p>
 <h2>Advertising</h2>
 <p>This app displays ads, provided by Google AdMob, to support the free version. AdMob and its partners may collect and use device identifiers (such as your device's advertising ID) to show and measure ads. Where required by law (including in the EEA and UK), you will be asked for consent before personalized ads are shown, and you can change that choice later from the app's Settings screen. On iOS, you will also be asked for tracking permission via Apple's App Tracking Transparency system.</p>
 <p>Additionally, for users who choose to watch an optional rewarded ad to earn business lookup credits, the app sends the local installation identifier to Google as custom data for Server-Side Verification (SSV), so Google can notify our backend server directly to grant the credits.</p>
@@ -168,21 +193,47 @@
 <h2>Children's privacy</h2>
 <p>This app is not directed at children and is not designed to collect information from children.</p>
 <h2>Data retention and deletion</h2>
-<p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup. The optional vCard safety mirror files are the exception: they are written to shared storage precisely so they survive uninstall — delete them from Manage Data in the app, or with your phone's Files app.</p>
+<p>Your data stays on your device for as long as the app is installed, or until you delete it within the app. Deactivating a contact keeps it retrievable inside the app; permanently deleting it removes it. Uninstalling the app removes its local database unless you have exported a backup. The dated encrypted copies saved on each export are the exception alongside the optional vCard safety mirror files: both are written to shared storage precisely so they survive uninstall — delete the encrypted copies with your phone's Files app, and the mirror files from Manage Data in the app, or with your phone's Files app.</p>
 <h2>Changes to this policy</h2>
 <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date at the top.</p>
 <h2>Contact</h2>
 <p>If you have questions about this policy, contact: <a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></p>
 </main>
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        <span>Keep Awhile</span>
+      </a>
+      <p style="margin: 6px 0 0;">Keep Awhile &middot; Android first. Contacts that know when to leave.</p>
+    </div>
     <ul>
+      <li><a href="features.html">Features</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></li>
     </ul>
-    <p>Keep Awhile &middot; Android first.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  var saved = localStorage.getItem("ka-theme");
+  if (saved === "light" || saved === "dark") {
+    root.setAttribute("data-theme", saved);
+  }
+  var btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme");
+      var sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("ka-theme", next);
+    });
+  }
+})();
+</script>
 </body>
 </html>

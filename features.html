@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Features — Keep Awhile</title>
-  <meta name="description" content="Everything Keep Awhile does: temporary contacts, a timeline of notes, search, Smart Capture, backups and recovery.">
+  <meta name="description" content="Everything Keep Awhile does: temporary contacts, ask-first expiry, a timeline of typed notes, global search, Smart Capture, backups, and one-tap recovery.">
   <meta name="theme-color" content="#2563EB">
   <meta property="og:title" content="Features — Keep Awhile">
   <meta property="og:description" content="Everything Keep Awhile does: temporary contacts, a timeline of notes, search, Smart Capture, backups and recovery.">
@@ -15,140 +15,379 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="32" height="32">Keep Awhile</a>
-    <nav aria-label="Main"><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html" aria-current="page">Features</a></li>
-      <li><a href="privacy-policy.html">Privacy</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul></nav>
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="" width="34" height="34">
+      <span>Keep Awhile</span>
+      <span class="brand-badge">Android</span>
+    </a>
+    <div class="header-controls">
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html" aria-current="page">Features</a></li>
+          <li><a href="privacy-policy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+      </button>
+      <a class="header-cta" href="#waitlist">Join Beta</a>
+    </div>
   </div>
 </header>
+
 <main id="main">
-<section class="section">
-  <div class="wrap">
-    <h1 class="section-title" style="font-size:2.25rem">Features</h1>
-    <div class="feature-row">
-      <div class="text">
-        <h2>Temporary contacts</h2>
-        <ul>
-          <li>Set a time limit when you save a contact</li>
-          <li>A time-left badge on every timed contact</li>
-          <li>A Timed tab for everyone on the clock</li>
-          <li>Make timed, extend or keep several contacts at once</li>
-        </ul>
+  <!-- PAGE HERO -->
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Complete Product Tour</span>
+        </div>
+        <h1>Every feature built for <span class="text-gradient">cleaner contacts &amp; deeper recall</span></h1>
+        <p class="hero-lead">
+          Explore how Keep Awhile combines temporary contact timers, structured relationship notes, on-device Smart Capture, and multi-layered backups.
+        </p>
       </div>
-      <div class="shots">
-        <img class="phone" src="assets/screenshots/02-temporary.png" alt="Timed tab listing contacts with days left on each" width="1080" height="2400" loading="lazy">
+
+      <nav class="jump-nav" aria-label="Feature sections">
+        <a href="#timed">Temporary Contacts</a>
+        <a href="#asks">Expiry Controls</a>
+        <a href="#memory">Relationship Memory</a>
+        <a href="#search">Global Search</a>
+        <a href="#capture">Smart Capture</a>
+        <a href="#backup">Backup &amp; Recovery</a>
+        <a href="#travel">Travel &amp; RTL</a>
+        <a href="#modes">Two Modes</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- FEATURE ROWS -->
+  <section class="section" style="padding-top: 24px;">
+    <div class="wrap">
+
+      <!-- 1. Temporary contacts -->
+      <div class="feature-row" id="timed">
+        <div class="text">
+          <span class="ui-pill ui-pill--amber">01 · Timed Lifecycle</span>
+          <h2>Temporary contacts</h2>
+          <p>Keep short-term contacts reachable while you need them, without letting them clutter your permanent address book forever.</p>
+          <ul>
+            <li><strong>Set a time limit</strong> right when you save or edit a contact</li>
+            <li><strong>Time-left badge</strong> on every timed contact showing days remaining</li>
+            <li><strong>Dedicated Timed tab</strong> for everyone currently on the clock</li>
+            <li><strong>Bulk actions</strong> to make timed, extend, or keep several contacts at once</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="device-frame has-popout">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/02-temporary.png" alt="Timed tab listing contacts with days left on each" width="1080" height="2400">
+            </div>
+            <div class="popout-slice" style="top: 14%;">
+              <img src="assets/screenshots/slice-02-timed-grid.png" alt="Active timed contacts grid with Expired, 1 day, and 3 days badges" width="1032" height="405">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Expiry controls: Ask first or auto-hide -->
+      <div class="feature-row flip" id="asks">
+        <div class="text">
+          <span class="ui-pill ui-pill--red">02 · Your Rules on Expiry</span>
+          <h2>Ask first by default, or auto-hide</h2>
+          <p>Choose whether you want to review expired contacts yourself or let Keep Awhile tidy them up automatically—either way, nothing is ever permanently deleted behind your back.</p>
+          <ul>
+            <li><strong>Ask-first default:</strong> a notification sheet lists contacts whose time is up so you can choose Keep, Extend, or Hide</li>
+            <li><strong>Optional auto-hide in Settings:</strong> prefer hands-free cleanup? Turn on auto-hide so expired contacts move out of your phonebook automatically</li>
+            <li><strong>Non-destructive hiding</strong> removes the contact from your phone's system address book while keeping the full record and notes inside Keep Awhile</li>
+            <li><strong>One-tap restore</strong> puts a hidden contact right back into your phonebook whenever you need them again</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/03b-expiry-decision.png" alt="Expired contact decision screen showing Keep, Extend, and Hide buttons" width="1080" height="2400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Relationship memory -->
+      <div class="feature-row" id="memory">
+        <div class="text">
+          <span class="ui-pill ui-pill--purple">03 · Contextual Notes</span>
+          <h2>Relationship memory</h2>
+          <p>Turn every contact card into a structured log of quotes, promises, borrowed items, and warranty records.</p>
+          <ul>
+            <li><strong>Chronological timeline</strong> of notes and attachments on every contact</li>
+            <li><strong>Typed notes:</strong> five built-in categories (Appointment, Call note, Payment, Quote, Warranty), plus custom types across eight colours</li>
+            <li><strong>Pinned notes:</strong> pin up to three critical notes per contact so key details stay at the top</li>
+            <li><strong>Rich attachments:</strong> attach photos (like a boiler serial plate or receipt) and files directly to a note</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="device-frame has-popout">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/04-contact-detail.png" alt="Contact page with a pinned note and notes grouped by date" width="1080" height="2400" loading="lazy">
+            </div>
+            <div class="popout-slice" style="top: 68%;">
+              <img src="assets/screenshots/slice-05-warranty-modal.png" alt="Warranty note opened with its boiler serial plate photo attachment" width="1032" height="415" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Find anything -->
+      <div class="feature-row flip" id="search">
+        <div class="text">
+          <span class="ui-pill ui-pill--blue">04 · Deep Search</span>
+          <h2>Find anything</h2>
+          <p>Even if you forget a contractor's name, you can find them by what they fixed or what tool you lent them.</p>
+          <ul>
+            <li><strong>Full-text search</strong> across contact names, phone numbers, note text, and note types</li>
+            <li><strong>Global Timeline tab</strong> displaying every note from every contact, newest first</li>
+            <li><strong>Settings search</strong> so you can jump straight to backup, mirror, or label options</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/07-global-timeline.png" alt="Timeline tab with a search and matching notes" width="1080" height="2400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Smart Capture -->
+      <div class="feature-row" id="capture">
+        <div class="text">
+          <span class="ui-pill ui-pill--green">05 · Fast Intake</span>
+          <h2>Smart Capture</h2>
+          <p>Start a contact from a map share or a business card without typing phone numbers and opening hours by hand.</p>
+          <ul>
+            <li><strong>Share from Google Maps</strong> directly into Keep Awhile to start a new contact</li>
+            <li><strong>Get business info</strong> enriches phone numbers and opening hours from open map data with explicit candidate confirmation</li>
+            <li><strong>On-device OCR:</strong> text recognition and entity extraction run locally on your phone</li>
+          </ul>
+        </div>
+        <div class="diagram-stage" aria-label="Smart Capture workflow preview">
+          <div class="mock-card">
+            <div class="mock-card-header">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span class="mock-avatar">📍</span>
+                <div>
+                  <strong style="display:block; color:var(--text);">Shared from Google Maps</strong>
+                  <span style="font-size:0.86rem; color:var(--muted);">Auto Repair Bay 7 · Place Link</span>
+                </div>
+              </div>
+              <span class="ui-pill ui-pill--blue">Step 1</span>
+            </div>
+          </div>
+
+          <div class="mock-flow-arrow">↓ On-Device OCR &amp; Open Map Lookup ↓</div>
+
+          <div class="mock-card">
+            <div class="mock-card-header">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span class="mock-avatar">A</span>
+                <div>
+                  <strong style="display:block; color:var(--text);">Auto Repair Bay 7</strong>
+                  <span style="font-size:0.86rem; color:var(--muted);">+1 202-555-0147 · Open 08:00–18:00</span>
+                </div>
+              </div>
+              <span class="ui-pill ui-pill--green">Verified Match</span>
+            </div>
+            <p style="margin:8px 0 0; font-size:0.88rem; color:var(--muted);">
+              Candidates are presented for your confirmation—nothing is written to a contact until you pick it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Backup and recovery -->
+      <div class="feature-row flip" id="backup">
+        <div class="text">
+          <span class="ui-pill ui-pill--green">06 · Safety Net</span>
+          <h2>Backup and recovery</h2>
+          <p>Your local database is paired with multi-layered backups and version snapshots so you never lose a number or note.</p>
+          <ul>
+            <li><strong>Plain-text vCard safety copy</strong> (`shown.vcf` and `hidden.vcf`) saved on your device, optional and readable even if the app is uninstalled</li>
+            <li><strong>Encrypted backup</strong> protected with your own passphrase</li>
+            <li><strong>Recovery Center</strong> with a history of edits, snapshots, and one-tap restore for hidden contacts</li>
+            <li><strong>Merge duplicates</strong> and smart clean-up suggestions</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img class="phone" src="assets/screenshots/09-organize.png" alt="Organize tab with backup, recovery and merge options" width="1080" height="2400" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Travel and languages -->
+      <div class="feature-row" id="travel">
+        <div class="text">
+          <span class="ui-pill ui-pill--amber">07 · Global Ready</span>
+          <h2>Travel and languages</h2>
+          <p>Designed for people who move between countries and languages without breaking local dialing rules.</p>
+          <ul>
+            <li><strong>Country-aware numbers</strong> understand both your home country and the country you are currently visiting</li>
+            <li><strong>Travel mode</strong> can automatically tag timeline notes with the region where you met or added a contact</li>
+            <li><strong>Arabic and right-to-left (RTL)</strong> native interface layouts</li>
+          </ul>
+        </div>
+        <div class="diagram-stage" aria-label="Travel and RTL layout preview">
+          <div class="mock-card">
+            <div class="mock-card-header">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span class="mock-avatar">🌍</span>
+                <div>
+                  <strong style="display:block; color:var(--text);">Travel Mode Active</strong>
+                  <span style="font-size:0.86rem; color:var(--muted);">Home region preserved · Visiting country detected</span>
+                </div>
+              </div>
+              <span class="ui-pill ui-pill--amber">Abroad Tag</span>
+            </div>
+            <p style="margin:6px 0 0; font-size:0.88rem; color:var(--muted);">
+              Hotel Alhambra · Timed (12 days left) · Tagged on timeline without sending your contacts off-device.
+            </p>
+          </div>
+
+          <div class="mock-card" dir="rtl" lang="ar">
+            <div class="mock-card-header">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span class="mock-avatar">ع</span>
+                <div>
+                  <strong style="display:block; color:var(--text);">دعم كامل للغة العربية (RTL)</strong>
+                  <span style="font-size:0.86rem; color:var(--muted);">واجهة مصممة بالكامل من اليمين إلى اليسار</span>
+                </div>
+              </div>
+              <span class="ui-pill ui-pill--blue">٣ أيام متبقية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Two ways to use it -->
+      <div class="feature-row flip" id="modes">
+        <div class="text">
+          <span class="ui-pill ui-pill--purple">08 · Flexible Onboarding</span>
+          <h2>Two ways to use it</h2>
+          <p>Choose the workflow that fits how you manage people when you first open Keep Awhile.</p>
+          <ul>
+            <li><strong>Full CRM or Safe Ledger</strong> onboarding choice right when you start</li>
+            <li><strong>Full CRM mode</strong> unlocks relationship timelines, typed notes, attachments, and timed contact management</li>
+            <li><strong>Safe Ledger mode</strong> keeps a focused, protected contact ledger on your device</li>
+          </ul>
+        </div>
+        <div class="diagram-stage" aria-label="Comparison of Full CRM and Safe Ledger modes">
+          <div class="mode-compare">
+            <div class="mock-card">
+              <span class="ui-pill ui-pill--blue" style="margin-bottom:10px;">Mode A</span>
+              <h3 style="font-size:1.15rem; margin:0 0 8px;">Full CRM View</h3>
+              <p style="margin:0; font-size:0.9rem; color:var(--muted);">
+                Complete relationship memory: timed contacts, pinned notes, custom note types, photo attachments, and global timeline search.
+              </p>
+            </div>
+            <div class="mock-card">
+              <span class="ui-pill ui-pill--green" style="margin-bottom:10px;">Mode B</span>
+              <h3 style="font-size:1.15rem; margin:0 0 8px;">Safe Ledger</h3>
+              <p style="margin:0; font-size:0.9rem; color:var(--muted);">
+                Streamlined, distraction-free address book protection with local-first storage and recovery backups.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CONVERSION BANNER -->
+  <section class="section" aria-labelledby="cta-features">
+    <div class="wrap">
+      <div class="cta-banner" id="waitlist">
+        <h2 id="cta-features">Ready to declutter your address book?</h2>
+        <p>Join our Google Group with your Google Play account for instant closed-beta access—no manual approval wait.</p>
+        <div class="waitlist-box">
+          <div class="beta-header">
+            <span class="beta-badge">
+              <span class="beta-dot"></span>
+              Closed Beta Open · Instant Access
+            </span>
+            <span style="font-size: 0.84rem; color: var(--muted); font-weight: 600;">Android 10 or later</span>
+          </div>
+          <ol class="beta-steps">
+            <li>
+              <span class="beta-step-tag">Step 1</span>
+              <span>Join the <strong>keepawhile-testers</strong> Google Group with your Google Play email.</span>
+            </li>
+            <li>
+              <span class="beta-step-tag">Step 2</span>
+              <span>Install Keep Awhile on Google Play once the closed beta build is live.</span>
+            </li>
+          </ol>
+          <div class="beta-actions">
+            <a class="btn" href="https://groups.google.com/g/keepawhile-testers" target="_blank" rel="noopener">
+              Join Tester Google Group →
+            </a>
+            <!-- STORE-LINK -->
+            <span class="btn" aria-disabled="true">Coming soon on Google Play</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="feature-row flip">
-      <div class="text">
-        <h2>Asks before it acts</h2>
-        <ul>
-          <li>A notification sheet lists contacts whose time is up</li>
-          <li>Hiding removes the contact from your phone's address book and keeps the full record in the app</li>
-          <li>Restore in one tap</li>
-        </ul>
-      </div>
-      <div class="shots">
-        <img class="phone" src="assets/screenshots/03-expiry-nudge.png" alt="Notifications sheet asking what to do with an expired contact" width="1080" height="2400" loading="lazy">
-      </div>
-    </div>
-    <div class="feature-row">
-      <div class="text">
-        <h2>Relationship memory</h2>
-        <ul>
-          <li>A timeline of notes and attachments on every contact</li>
-          <li>Typed notes: five built in, add your own, eight colours</li>
-          <li>Pin up to three notes per contact</li>
-          <li>Attach photos and files</li>
-        </ul>
-      </div>
-      <div class="shots">
-        <img class="phone" src="assets/screenshots/04-contact-detail.png" alt="Contact page with a pinned note and notes grouped by date" width="1080" height="2400" loading="lazy">
-        <img class="phone" src="assets/screenshots/05-note-view.png" alt="A note opened with its photo attachment" width="1080" height="2400" loading="lazy">
-        <img class="phone" src="assets/screenshots/06-note-types.png" alt="Manage note types screen with the colour palette" width="1080" height="2400" loading="lazy">
-      </div>
-    </div>
-    <div class="feature-row flip">
-      <div class="text">
-        <h2>Find anything</h2>
-        <ul>
-          <li>Search names, numbers, note text and note types</li>
-          <li>A Timeline tab with every note from every contact</li>
-          <li>Search the app's own settings too</li>
-        </ul>
-      </div>
-      <div class="shots">
-        <img class="phone" src="assets/screenshots/07-global-timeline.png" alt="Timeline tab with a search and matching notes" width="1080" height="2400" loading="lazy">
-      </div>
-    </div>
-    <div class="feature-row">
-      <div class="text">
-        <h2>Smart Capture</h2>
-        <ul>
-          <li>Share a place from Google Maps to start a contact</li>
-          <li>Tap Get business info to fill in phone and opening hours</li>
-          <li>Text recognition and entity extraction run on your device</li>
-        </ul>
-      </div>
-    </div>
-    <div class="feature-row flip">
-      <div class="text">
-        <h2>Backup and recovery</h2>
-        <ul>
-          <li>A plain-text vCard safety copy saved on your device, optional</li>
-          <li>An encrypted backup you protect with a passphrase</li>
-          <li>A Recovery Center with a history of changes and one-tap restore</li>
-          <li>Merge duplicates and clean-up suggestions</li>
-        </ul>
-      </div>
-      <div class="shots">
-        <img class="phone" src="assets/screenshots/09-organize.png" alt="Organize tab with backup, recovery and merge options" width="1080" height="2400" loading="lazy">
-        <img class="phone" src="assets/screenshots/10-recovery-restore.png" alt="Recovery Center listing hidden contacts with Restore" width="1080" height="2400" loading="lazy">
-      </div>
-    </div>
-    <div class="feature-row">
-      <div class="text">
-        <h2>Travel and languages</h2>
-        <ul>
-          <li>Phone numbers understand your home country and the country you are in</li>
-          <li>Travel mode can tag notes with where you were</li>
-          <li>Arabic and right-to-left layouts</li>
-        </ul>
-      </div>
-      <div class="shots">
-        
-      </div>
-    </div>
-    <div class="feature-row flip">
-      <div class="text">
-        <h2>Two ways to use it</h2>
-        <ul>
-          <li>Pick Full CRM or Safe Ledger when you first open the app</li>
-        </ul>
-      </div>
-      <div class="shots">
-        
-      </div>
-    </div>
-    <p style="margin-top:48px"><!-- STORE-LINK -->
-      <span class="btn" aria-disabled="true">Coming soon on Google Play</span></p>
-  </div>
-</section>
+  </section>
 </main>
+
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        <span>Keep Awhile</span>
+      </a>
+      <p style="margin: 6px 0 0;">Keep Awhile &middot; Android first. Contacts that know when to leave.</p>
+    </div>
     <ul>
+      <li><a href="index.html">Home</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="terms.html">Terms of Service</a></li>
       <li><a href="mailto:saeed201@gmail.com">saeed201@gmail.com</a></li>
     </ul>
-    <p>Keep Awhile &middot; Android first.</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var saved = localStorage.getItem("ka-theme");
+  if (saved === "light" || saved === "dark") {
+    root.setAttribute("data-theme", saved);
+  }
+  var btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme");
+      var sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("ka-theme", next);
+    });
+  }
+})();
+</script>
 </body>
 </html>
